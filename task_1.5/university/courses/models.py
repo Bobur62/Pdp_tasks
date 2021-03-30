@@ -26,5 +26,5 @@ class Teacher(models.Model):
 
 class Subject(models.Model):
     name = models.CharField(max_length=512)
-    speciality = models.ForeignKey(Speciality, on_delete=models.CASCADE)
-    teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE)
+    speciality = models.ManyToManyField(Speciality)
+    teacher = models.ManyToManyField(Teacher)
