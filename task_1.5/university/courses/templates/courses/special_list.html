@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Special list</title>
+</head>
+<body>
+    <h1>Special list</h1>
+    <ul>
+        {% if special_list %}
+            {% for special in special_list %}
+                <li>{{ special.name }} code: {{ special.code }}</li>
+            {% endfor %}
+        {% else %}
+            <h1>Special list None</h1>
+        {% endif %}
+    </ul>
+</body>
+</html>

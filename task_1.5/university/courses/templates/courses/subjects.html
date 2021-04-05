@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    {% if subjects %}
+        <h1>Fanlar ro'yxati</h1>
+        <ul style="text-decoration: none;">
+            {% for subject in subjects %}
+                <li style="margin-top: 15px;">
+                    <a href="{% url 'subject-detail' subject.pk %}">
+                    {{ subject }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h1>No Subjects</h1>
+    {% endif %}
+
+</body>
+</html>

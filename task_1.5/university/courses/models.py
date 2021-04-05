@@ -36,4 +36,4 @@ class Subject(models.Model):
     teacher = models.ManyToManyField(Teacher)
 
     def __str__(self):
-        return f"{self.name} science"
+        return f"{self.name} fani"
