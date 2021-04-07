@@ -17,6 +17,13 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('courses/', include('courses.urls'))  #task1.7_1
+    path('_admin/', admin.site.urls),
+
+    # static
+    path('courses/', include('courses.urls')),  # task1.7_1
+
+    # dynamic
+
+    # staff only
+
 ]
